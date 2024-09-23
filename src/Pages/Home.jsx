@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <section
-        className="h-screen flex flex-col justify-center items-center text-center p-4 bg-cover bg-center text-white font-inter font-bold"
+        className="h-screen flex flex-col justify-center items-center text-center p-4 bg-cover bg-center text-white font-inter font-bold mt-16"
         style={{ backgroundImage: "url('assets/Initial.png')" }}
       >
         <div className="text-6xl md:text-8xl font-bold mb-4 font-bebas">
@@ -19,6 +19,8 @@ const Home = () => {
           Break Limits. Build Skills.
         </p>
         <CountdownTimer targetDate={targetDate} />
+        <p className="text-xl md:text-3xl mt-8 mb-8 font-bebas">To GO</p>
+
         <button className="mt-8 px-6 py-3 bg-white text-black font-semibold rounded-full hover:bg-opacity-90 transition duration-300">
           <Link to={"/register"}>Register Now</Link>
         </button>
