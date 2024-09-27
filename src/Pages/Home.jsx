@@ -22,10 +22,11 @@ const Home = () => {
         </p>
         <CountdownTimer targetDate={targetDate} />
         <p className="text-xl md:text-3xl mt-8 mb-8 font-bebas">To GO</p>
-
-        <button className="mt-8 px-6 py-3 bg-white text-black font-semibold rounded-full hover:bg-opacity-90 transition duration-300">
-          <Link to={"/register"}>Register Now</Link>
-        </button>
+        <Link to={"/register"}>
+          <button className="mt-8 px-6 py-3 bg-white text-black font-semibold rounded-full hover:bg-opacity-90 transition duration-300">
+            Register Now
+          </button>
+        </Link>
         <ChevronDown className="mt-12 animate-bounce" size={32} />
       </section>
 
