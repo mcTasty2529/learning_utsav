@@ -16,7 +16,7 @@ const Register = () => {
               </h2>
               <div className="p-6">
                 <GoogleForm
-                  src="https://docs.google.com/forms/d/e/1FAIpQLSetQyq7WKJHVY9ToffIARW4sN3s7liRC1vnfEYX5f3_n9I-gA/viewform?usp=sf_link"
+                  src="https://docs.google.com/forms/d/e/1FAIpQLSfV1mn5_Gt0-vj0N3Ff2aHyxVQ3xQHMboGDyGL8Ng3ijAPEbg/viewform?embedded=true"
                   width="100%"
                   height="600"
                 />
@@ -29,7 +29,7 @@ const Register = () => {
               style={{ backgroundImage: "url('assets/form_bg.png')" }}
             >
               <div className="text-6xl md:text-8xl font-bold mb-4 font-bebas">
-                Learning Utsav.
+                Learning Utsav
               </div>
               <p className="text-xl md:text-3xl mb-8 font-dancing">
                 Break Limits. Build Skills.

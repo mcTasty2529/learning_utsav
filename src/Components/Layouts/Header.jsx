@@ -11,13 +11,13 @@ const Header = () => {
 
   const menuItems = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    { name: "Our Team", href: "/team" },
+    { name: "Contact Us", href: "/contact" },
   ];
 
   return (
     <>
-      <header className="flex justify-between fixed w-full items-center px-6 md:px-12 py-4 bg-[#111111] opacity-100 shadow-lg font-inter">
+      <header className="flex justify-between fixed w-full items-center px-6 md:px-12 py-4 bg-[#111111] opacity-100 shadow-lg font-inter border-b-2 border-[#ffffff17]">
         <div className="text-2xl font-bold  gap-2 font-dancing text-white">
           <Link to={"/"} className="flex justify-center items-center gap-2">
             <img src="assets/white_logo.png" alt="" height={45} width={45} />

@@ -1,6 +1,8 @@
 import { ChevronDown } from "lucide-react";
 import { CountdownTimer } from "../Components/Timer";
 import { Link } from "react-router-dom";
+import PartnerCards from "../Components/PartnerCards";
+import SponsorCard from "../Components/SponsorCard";
 
 const Home = () => {
   // Set your target date here
@@ -28,16 +30,47 @@ const Home = () => {
       </section>
 
       {/* Additional Content Section */}
-      <section className="bg-gray-100 py-16 px-4 font-inter">
+      <section className="bg-gray-100 py-16 px-4 font-inter border-b-2">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8">
-            About the Event
+            About this Event
           </h2>
-          <p className="text-lg text-gray-700 text-center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
-            dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed
-            auctor neque eu tellus rhoncus ut eleifend nibh porttitor.
+          <p className="text-lg px-4 md:px-0 text-gray-700 text-center">
+            <b>Learning Utsav</b> is a one-of-a-kind challenge designed to help
+            you sharpen your skills in cutting-edge tech fields: Electronics,
+            Software/Web Development, AI/Data Science, Cybersecurity, and Cloud
+            Technologies. This innovative program offers a unique blend of
+            learning and celebration, perfectly timed with the festive season.
           </p>
+          <p className="text-lg px-4 md:px-0 text-gray-700 text-center">
+            Use this festive season not only for celebration but also to elevate
+            your skills, expand your professional network, and showcase your
+            progress. Whether you&apos;re a working professional aiming to stay
+            ahead in your field or a student laying the foundation for a tech
+            career, Learning Utsav is the perfect way to learn, share, and grow.
+            Join us in this exciting learning adventure and transform your tech
+            skills while creating lasting connections. Don&apos;t miss this
+            opportunity to make your festive season both enjoyable and
+            intellectually rewarding!
+          </p>
+        </div>
+      </section>
+
+      <section className="bg-gray-100 py-16 px-4 font-inter border-b-2">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8">Our Partners</h2>
+          <div className="flex justify-center items-center w-full">
+            <PartnerCards />
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-gray-100 py-16 px-4 font-inter border-b-2">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8">Our Sponsors</h2>
+          <div className="flex justify-center items-center w-full">
+            <SponsorCard />
+          </div>
         </div>
       </section>
     </div>

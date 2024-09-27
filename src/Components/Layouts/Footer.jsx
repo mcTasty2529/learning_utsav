@@ -44,6 +44,17 @@ const Footer = () => {
           <p className="text-sm text-center">
             &copy; 2024 KEC Electronics Club. All rights reserved.
           </p>
+          <p className="text-sm text-center mt-2">
+            Developed and maintained by{" "}
+            <Link
+              to={"https://github.com/mcTasty2529"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className=" underline">Subodh Pokhrel</span>
+            </Link>
+            .
+          </p>
         </div>
       </div>
     </footer>
