@@ -1,5 +1,4 @@
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTiktok } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaDiscord, FaFacebookF, FaInstagram, FaLinkedinIn, FaTiktok } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -22,12 +21,12 @@ const Footer = () => {
     {
       name: "Tiktok",
       icon: FaTiktok ,
-      url: "https://www.tiktok.com/",
+      url: "https://www.tiktok.com/@learningutsav",
     },
     {
-      name: "Twitter",
-      icon: FaXTwitter  ,
-      url: "https://www.x.com/",
+      name: "Discord",
+      icon: FaDiscord  ,
+      url: "https://discord.gg/RzubQrbzzw",
     },
   ];
 
@@ -56,7 +55,7 @@ const Footer = () => {
             &copy; 2024 KEC Electronics Club. All rights reserved.
           </p>
           <p className="text-sm text-center mt-2">
-            Developed and maintained by{" "}
+            Website written and maintained by{" "}
             <Link
               to={"https://github.com/mcTasty2529"}
               target="_blank"

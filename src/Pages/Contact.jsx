@@ -1,5 +1,6 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
+import { Link } from "react-router-dom";
 
 const ContactUs = () => {
   const [name, setName] = useState("");
@@ -54,13 +55,9 @@ const ContactUs = () => {
     {
       name: "TikTok",
       image: "/assets/tt-logo.png",
-      href: "#",
+      href: "https://www.tiktok.com/@learningutsav",
     },
-    {
-      name: "Twitter",
-      image: "/assets/x-logo.png",
-      href: "#",
-    },
+   
    
   ];
 
@@ -188,7 +185,7 @@ const ContactUs = () => {
                       d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                     />
                   </svg>
-                  <span className="text-gray-600">larningutsav@gmail.com</span>
+                  <span className="text-gray-600">learningutsav@gmail.com</span>
                 </div>
                 
                 <div className="mt-8">
@@ -200,7 +197,7 @@ const ContactUs = () => {
                       <a
                         key={social.name}
                         href={social.href}
-                        className="transform hover:scale-110 transition-transform duration-300 bg-cover h-full w-fll"
+                        className="transform hover:scale-110 transition-transform duration-300"
                         target="_blank"
                         rel="noopener noreferrer"
                         
@@ -214,6 +211,20 @@ const ContactUs = () => {
                     ))}
                   </div>
                 </div>
+
+                <div className="mt-8">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-4">
+                    Join our Discord.
+                  </h4>
+                  <div className="grid grid-cols-5 gap-4">
+                    <Link to={'https://discord.gg/RzubQrbzzw'} className="transform hover:scale-110 transition-transform duration-300" target="_blank"
+                        rel="noopener noreferrer">
+                    <img src="assets/dis-logo.png" alt="discord" height={40} width={40}/>
+                    </Link>
+                  </div>
+                </div>
+
+
               </div>
             </div>
           </div>
