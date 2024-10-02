@@ -17,10 +17,10 @@ const Header = () => {
 
   return (
     <>
-      <header className="flex justify-between fixed w-full items-center px-6 md:px-12 py-4 bg-[#111111] opacity-100 shadow-lg font-inter border-b-2 border-[#ffffff17]">
+      <header className="flex justify-between fixed w-full items-center px-6 md:px-12 py-4 bg-[#111111] opacity-100 shadow-lg font-inter border-b-2 border-[#ffffff17] z-10">
         <div className="text-2xl font-bold  gap-2 font-dancing text-white">
           <Link to={"/"} className="flex justify-center items-center gap-2">
-            <img src="assets/white_logo.png" alt="" height={45} width={45} />
+            <img src="./assets/white_logo.png" alt="" height={45} width={45} />
             <h1 className="hidden md:block">Learning Utsav</h1>
           </Link>
         </div>
@@ -40,10 +40,7 @@ const Header = () => {
           </nav>
 
           {/* Register Button */}
-          <button className="bg-white text-red-600 font-semibold hover:bg-opacity-90 transition duration-300 py-2 px-4 rounded-md">
-            <Link to={"/register"}>Register</Link>
-          </button>
-
+         
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}

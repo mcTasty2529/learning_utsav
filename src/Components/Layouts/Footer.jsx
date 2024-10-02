@@ -1,22 +1,33 @@
-import { FaFacebookSquare, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTiktok } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   const socialLinks = [
     {
       name: "LinkedIn",
-      icon: FaLinkedin,
-      url: "https://www.linkedin.com/",
+      icon: FaLinkedinIn,
+      url: "https://www.linkedin.com/company/learning-utsav",
     },
     {
       name: "Facebook",
-      icon: FaFacebookSquare,
-      url: "https://www.facebook.com/",
+      icon: FaFacebookF,
+      url: "https://www.facebook.com/learningutsav",
     },
     {
       name: "Instagram",
       icon: FaInstagram,
-      url: "https://www.instagram.com/",
+      url: "https://www.instagram.com/learningutsav",
+    },
+    {
+      name: "Tiktok",
+      icon: FaTiktok ,
+      url: "https://www.tiktok.com/",
+    },
+    {
+      name: "Twitter",
+      icon: FaXTwitter  ,
+      url: "https://www.x.com/",
     },
   ];
 

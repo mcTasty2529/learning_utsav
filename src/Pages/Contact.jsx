@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import emailjs from "emailjs-com";
 
 const ContactUs = () => {
@@ -35,6 +35,35 @@ const ContactUs = () => {
       );
   };
 
+  const socialLinks = [
+    {
+      name: "Facebook",
+      image: "/assets/fb-logo.png",
+      href: "https://www.facebook.com/learningutsav",
+    },
+    {
+      name: "LinkedIn",
+      image: "/assets/li-logo.png",
+      href: "https://www.linkedin.com/company/learning-utsav",
+    },
+    {
+      name: "Instagram",
+      image: "/assets/ig-logo.png",
+      href: "https://www.instagram.com/learningutsav",
+    },
+    {
+      name: "TikTok",
+      image: "/assets/tt-logo.png",
+      href: "#",
+    },
+    {
+      name: "Twitter",
+      image: "/assets/x-logo.png",
+      href: "#",
+    },
+   
+  ];
+
   return (
     <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8 font-inter">
       <div className="max-w-7xl mx-auto mt-20">
@@ -43,18 +72,19 @@ const ContactUs = () => {
             Contact Us
           </h2>
           <p className="mt-4 text-lg text-gray-500">
-            We'd love to hear from you! Please fill out the form below or use
-            our contact information.
+            We&apos;d love to hear from you! Please fill out the form below or connect with us on social media.
           </p>
         </div>
 
         <div className="mt-16 grid grid-cols-1 gap-16 lg:grid-cols-2">
+          {/* Form section remains unchanged */}
           <div className="bg-white rounded-lg shadow-xl overflow-hidden">
             <div className="px-6 py-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 Send us a message
               </h3>
               <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Form inputs remain unchanged */}
                 <div>
                   <label htmlFor="name" className="sr-only">
                     Your Name
@@ -121,7 +151,7 @@ const ContactUs = () => {
                   role="alert"
                 >
                   <p className="font-bold">Thank you for your message!</p>
-                  <p>We'll get back to you soon.</p>
+                  <p>We&apos;ll get back to you soon.</p>
                 </div>
               )}
               {error && (
@@ -136,29 +166,13 @@ const ContactUs = () => {
             </div>
           </div>
 
+          {/* Updated Connect With Us section */}
           <div className="bg-white rounded-lg shadow-xl overflow-hidden">
             <div className="px-6 py-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Contact Information
+                Connect With Us
               </h3>
               <div className="space-y-6">
-                <div className="flex items-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 text-indigo-600 mr-3"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                    />
-                  </svg>
-                  <span className="text-gray-600">+1 (555) 123-4567</span>
-                </div>
                 <div className="flex items-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -176,43 +190,30 @@ const ContactUs = () => {
                   </svg>
                   <span className="text-gray-600">larningutsav@gmail.com</span>
                 </div>
-                <div className="flex items-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 text-indigo-600 mr-3"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                  </svg>
-                  <span className="text-gray-600">
-                    123 Main St, Anytown, USA 12345
-                  </span>
+                
+                <div className="mt-8">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-4">
+                    Follow Us
+                  </h4>
+                  <div className="grid grid-cols-5 gap-4">
+                    {socialLinks.map((social) => (
+                      <a
+                        key={social.name}
+                        href={social.href}
+                        className="transform hover:scale-110 transition-transform duration-300 bg-cover h-full w-fll"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        
+                      >
+                        <img
+                          src={social.image}
+                          alt={`${social.name} logo`}
+                          className="h-8 w-8 object-contain"
+                        />
+                      </a>
+                    ))}
+                  </div>
                 </div>
-              </div>
-              <div className="mt-8">
-                <h4 className="text-lg font-semibold text-gray-900 mb-4">
-                  Office Hours
-                </h4>
-                <p className="text-gray-600">
-                  Monday - Friday: 9:00 AM - 5:00 PM
-                  <br />
-                  Saturday: 10:00 AM - 2:00 PM
-                  <br />
-                  Sunday: Closed
-                </p>
               </div>
             </div>
           </div>
