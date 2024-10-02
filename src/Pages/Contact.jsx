@@ -65,7 +65,7 @@ const ContactUs = () => {
     <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8 font-inter">
       <div className="max-w-7xl mx-auto mt-20">
         <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl ">
             Contact Us
           </h2>
           <p className="mt-4 text-lg text-gray-500">
