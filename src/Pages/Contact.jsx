@@ -57,8 +57,6 @@ const ContactUs = () => {
       image: "/assets/tt-logo.png",
       href: "https://www.tiktok.com/@learningutsav",
     },
-   
-   
   ];
 
   return (
@@ -69,7 +67,8 @@ const ContactUs = () => {
             Contact Us
           </h2>
           <p className="mt-4 text-lg text-gray-500">
-            We&apos;d love to hear from you! Please fill out the form below or connect with us on social media.
+            We&apos;d love to hear from you! Please fill out the form below or
+            connect with us on social media.
           </p>
         </div>
 
@@ -129,7 +128,7 @@ const ContactUs = () => {
                 </div>
                 <button
                   type="submit"
-                  className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  className="w-full flex justify-center items-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
                   Send Message
                   <svg
@@ -138,7 +137,7 @@ const ContactUs = () => {
                     viewBox="0 0 20 20"
                     fill="currentColor"
                   >
-                    <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
+                    <path d="M17.447 10.553a1 1 0 000-1.788l-14-7a1 1 0 00-1.409 1.169l1.429 5A1 1 0 004.429 9H9a1 1 0 110 2H4.429a1 1 0 00-.962.725l-1.428 5a1 1 0 001.408 1.17l14-7z" />
                   </svg>
                 </button>
               </form>
@@ -187,7 +186,7 @@ const ContactUs = () => {
                   </svg>
                   <span className="text-gray-600">learningutsav@gmail.com</span>
                 </div>
-                
+
                 <div className="mt-8">
                   <h4 className="text-lg font-semibold text-gray-900 mb-4">
                     Follow Us
@@ -200,7 +199,6 @@ const ContactUs = () => {
                         className="transform hover:scale-110 transition-transform duration-300"
                         target="_blank"
                         rel="noopener noreferrer"
-                        
                       >
                         <img
                           src={social.image}
@@ -217,14 +215,42 @@ const ContactUs = () => {
                     Join our Discord.
                   </h4>
                   <div className="grid grid-cols-5 gap-4">
-                    <Link to={'https://discord.gg/RzubQrbzzw'} className="transform hover:scale-110 transition-transform duration-300" target="_blank"
-                        rel="noopener noreferrer">
-                    <img src="assets/dis-logo.png" alt="discord" height={40} width={40}/>
+                    <Link
+                      to={"https://discord.gg/RzubQrbzzw"}
+                      className="transform hover:scale-110 transition-transform duration-300"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="assets/dis-logo.png"
+                        alt="discord"
+                        height={40}
+                        width={40}
+                      />
                     </Link>
                   </div>
                 </div>
 
-
+                <div className="mt-6 ">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                    Visit our Linktree.
+                  </h4>
+                  <div className="grid grid-cols-5 gap-4">
+                    <Link
+                      to={"https://linktr.ee/learningutsav"}
+                      className="transform hover:scale-110 transition-transform duration-300"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="assets/linktree-logo.png"
+                        alt="discord"
+                        height={60}
+                        width={60}
+                      />
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

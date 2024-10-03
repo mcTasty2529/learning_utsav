@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
+import { useState, useEffect } from "react";
 import { ChevronDown, ArrowRight, Clock, Users, Trophy } from "lucide-react";
 import AboutEventSection from "../Components/AboutEventSection";
 import SponsorsAndPartnersSection from "../Components/SponsorsAndPartnersSection";
+import { Link } from "react-router-dom";
 
 const FeatureCard = ({ icon: Icon, title, description }) => (
   <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -13,30 +15,96 @@ const FeatureCard = ({ icon: Icon, title, description }) => (
   </div>
 );
 
+const CountUpTimer = () => {
+  const [days, setDays] = useState(1);
+
+  useEffect(() => {
+    const startDate = new Date("2024-10-03");
+    const updateTimer = () => {
+      const now = new Date();
+      const difference = Math.abs(
+        Math.floor((now - startDate) / (1000 * 60 * 60 * 24))
+      );
+      setDays(Math.min(difference + 1, 32));
+    };
+
+    updateTimer();
+    const interval = setInterval(updateTimer, 1000 * 60 * 60);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="flex justify-center">
+      <div className="bg-white/20 backdrop-blur-lg rounded-xl p-4 md:p-6 shadow-lg mt-4 md:mt-8 w-36 sm:w-48">
+        <div className="text-4xl sm:text-6xl font-bold text-red-600">
+          {days}
+        </div>
+        <div className="text-sm sm:text-xl text-white mt-1 sm:mt-2">
+          Days of Learning
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const Home = () => {
   return (
     <div className="min-h-screen flex flex-col font-inter">
       <section
-        className="h-screen flex flex-col justify-center items-center text-center p-4 bg-cover bg-center text-white relative"
-        style={{ 
+        className="min-h-screen py-20 md:py-32 flex flex-col justify-center items-center text-center p-4 bg-cover bg-center text-white relative mt-10"
+        style={{
           backgroundImage: "url('/assets/Initial.png')",
-          backgroundAttachment: "fixed"
+          backgroundAttachment: "fixed",
         }}
       >
-        <div className="absolute inset-0 "></div>
-        <div className="relative  max-w-4xl">
-          <h1 className="text-7xl md:text-9xl font-bold mb-6 font-bebas tracking-wide">
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="relative w-full max-w-4xl mx-auto">
+          <h1 className="text-5xl sm:text-7xl md:text-9xl font-bold mb-4 md:mb-6 font-bebas tracking-wide">
             Learning Utsav
           </h1>
-          <p className="text-2xl md:text-4xl mb-8 font-dancing">
+          <p className="text-xl sm:text-2xl md:text-4xl mb-4 md:mb-8 font-dancing">
             Break Limits. <span className="text-red-400">Build Skills.</span>
           </p>
-          <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
-            An innovative journey of learning and celebration, 
-            where technology meets tradition.
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto leading-relaxed mb-6 md:mb-8">
+            An innovative journey of learning and celebration, where technology
+            meets tradition.
           </p>
+
+          <CountUpTimer />
+
+          <Link to={"/"}>
+            <button className="mt-6 md:mt-8 bg-red-600 hover:bg-red-700 text-white text-lg md:text-xl py-2 px-4 md:py-3 md:px-6 rounded-lg transition-colors duration-300 shadow-lg hover:shadow-xl">
+              Update Your Progress
+            </button>
+          </Link>
+
+          <div className="mt-8 md:mt-12 flex justify-center items-center  space-x-8">
+            <div className="text-center">
+              <p className="text-sm mb-2">Initiative of</p>
+              <div className="p-4 rounded-lg flex justify-center items-center w-24 h-24 sm:w-32 sm:h-32">
+                <img
+                  src="/assets/kec-light-logo.png"
+                  alt="Powered by logo"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </div>
+            <div className="text-center">
+              <p className="text-sm mb-2">Supported by</p>
+              <div className="p-4 rounded-lg flex justify-center items-center w-24 h-24 sm:w-32 sm:h-32">
+                <img
+                  src="/assets/kcc-light-logo.png"
+                  alt="Supported by logo"
+                  className="w-full h-full object-contain flex justify-center items-center"
+                />
+              </div>
+            </div>
+          </div>
         </div>
-        <ChevronDown className="absolute bottom-12 animate-bounce" size={32} />
+        <ChevronDown
+          className="absolute bottom-4 md:bottom-12 animate-bounce"
+          size={32}
+        />
       </section>
 
       <section className="py-20 px-4 bg-gray-50">
@@ -46,24 +114,24 @@ const Home = () => {
               Welcome to the Future of Learning
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              <span className="font-semibold text-red-600">Learning Utsav</span> is a 
-              one-of-a-kind challenge designed to help you sharpen your skills in 
-              cutting-edge tech fields.
+              <span className="font-semibold text-red-600">Learning Utsav</span>{" "}
+              is a one-of-a-kind challenge designed to help you sharpen your
+              skills in cutting-edge tech fields.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <FeatureCard 
+            <FeatureCard
               icon={Clock}
               title="Perfect Timing"
               description="Aligned with the festive season, offering a unique blend of learning and celebration."
             />
-            <FeatureCard 
+            <FeatureCard
               icon={Users}
               title="For Everyone"
               description="From working professionals and students to tech enthusiasts – all united by a passion for growth."
             />
-            <FeatureCard 
+            <FeatureCard
               icon={Trophy}
               title="Skill Mastery"
               description="Master Electronics, Software Development, AI/Data Science, Cybersecurity, and Cloud Technologies."
@@ -83,10 +151,16 @@ const Home = () => {
                 "Working professionals aiming to stay ahead",
                 "Students laying the foundation for a tech career",
                 "Tech enthusiasts looking to expand knowledge",
-                "Anyone passionate about learning and growth"
+                "Anyone passionate about learning and growth",
               ].map((item, index) => (
-                <li key={index} className="flex items-center text-lg text-gray-700">
-                  <ArrowRight className="text-indigo-600 mr-3 flex-shrink-0" size={20} />
+                <li
+                  key={index}
+                  className="flex items-center text-lg text-gray-700"
+                >
+                  <ArrowRight
+                    className="text-indigo-600 mr-3 flex-shrink-0"
+                    size={20}
+                  />
                   {item}
                 </li>
               ))}
@@ -95,12 +169,13 @@ const Home = () => {
           <div className="bg-gradient-to-br from-red-500 to-purple-600 p-8 rounded-2xl text-white">
             <h3 className="text-2xl font-semibold mb-4">Why Learning Utsav?</h3>
             <p className="text-lg leading-relaxed mb-4">
-              This innovative program offers a unique blend of learning and celebration. 
-              Use this time to elevate your skills, expand your professional network, 
-              and showcase your progress.
+              This innovative program offers a unique blend of learning and
+              celebration. Use this time to elevate your skills, expand your
+              professional network, and showcase your progress.
             </p>
             <p className="text-lg leading-relaxed">
-              Join us in this journey of transformation where tradition meets technology.
+              Join us in this journey of transformation where tradition meets
+              technology.
             </p>
           </div>
         </div>
