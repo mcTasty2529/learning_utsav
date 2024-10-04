@@ -90,7 +90,7 @@ export const teamMembers = {
     {
       name: "Bibek Khanal",
       image: "/assets/moderators/bibek.jpg",
-      link: "",
+      link: "https://www.linkedin.com/in/bibek-khanal-7597ab32b",
     },
     {
       name: "Nabin Regmi",

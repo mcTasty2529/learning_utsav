@@ -13,7 +13,7 @@ const TeamMemberCard = ({ member }) => (
       />
     </div>
     <div className="p-3 h-24 flex flex-col justify-center">
-      <h3 className="text-lg font-bold font-inter  text-gray-800 line-clamp-2">
+      <h3 className="text-lg font-bold font-inter text-gray-800 line-clamp-2">
         {member.name}
       </h3>
       {member.description && (
@@ -25,6 +25,21 @@ const TeamMemberCard = ({ member }) => (
   </div>
 );
 
+const TeamMemberWrapper = ({ member, children }) => {
+  if (member.link) {
+    return (
+      <Link
+        to={member.link}
+        className="block transition-transform duration-300 hover:scale-105"
+        target="_blank"
+      >
+        {children}
+      </Link>
+    );
+  }
+  return <div className="block">{children}</div>;
+};
+
 const TeamSection = ({ title, members = [] }) => {
   if (!members || members.length === 0) {
     return null;
@@ -35,15 +50,11 @@ const TeamSection = ({ title, members = [] }) => {
       <h2 className="text-4xl font-bold text-gray-800 mb-12 text-center">
         {title}
       </h2>
-      <div className="grid grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-8">
+      <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
         {members.map((member) => (
-          <Link
-            to={member.link}
-            key={member.id || member.name}
-            className="block transition-transform duration-300 hover:scale-105"
-          >
+          <TeamMemberWrapper key={member.id || member.name} member={member}>
             <TeamMemberCard member={member} />
-          </Link>
+          </TeamMemberWrapper>
         ))}
       </div>
     </section>
@@ -73,7 +84,6 @@ const PhilosophySection = () => (
 );
 
 const Team = () => {
-  // Check if teamMembers is defined before accessing its properties
   const organizers = teamMembers?.organizers || [];
   const moderators = teamMembers?.moderators || [];
 
