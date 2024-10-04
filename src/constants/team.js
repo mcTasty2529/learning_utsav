@@ -63,14 +63,59 @@ export const teamMembers = {
   ],
   moderators: [
     {
-      name: "Mike Johnson",
-      image: "/team/mike-johnson.jpg",
+      name: "Abi Shrestha",
+      image: "/assets/moderators/abhi.jpg",
+      link: "https://www.linkedin.com/in/39abii",
+    },
+    {
+      name: "Bijaya Giri ",
+      image: "/assets/moderators/bijaya.png",
+      link: "https://www.linkedin.com/in/bijaya-giri-927266251",
+    },
+    {
+      name: "Suprem Khatri",
+      image: "/assets/moderators/suprem.jpg",
+      link: "https://www.linkedin.com/in/suprem-khatri-96ab3125a/",
+    },
+    {
+      name: "Saroj Dhakal",
+      image: "/assets/moderators/saroj.jpg",
+      link: "https://www.linkedin.com/in/saroj-dhakal-136a42256/",
+    },
+    {
+      name: "Shrija Pandey",
+      image: "/assets/moderators/shrija.jpg",
+      link: "https://www.linkedin.com/in/shrija-pandey-02264b27a",
+    },
+    {
+      name: "Bibek Khanal",
+      image: "/assets/moderators/bibek.jpg",
       link: "/team",
     },
     {
-      name: "Sarah Brown",
-      image: "/team/sarah-brown.jpg",
-      link: "/team",
+      name: "Nabin Regmi",
+      image: "/assets/moderators/nabin.jpeg",
+      link: "https://www.linkedin.com/in/nabin-regmi-20a90b256/",
+    },
+    {
+      name: "Suman Basnet",
+      image: "/assets/moderators/suman.jpg",
+      link: "https://www.linkedin.com/in/suman-basnet-b02a22330",
+    },
+    {
+      name: "Sampada Tandan",
+      image: "/assets/moderators/sampada.jpeg",
+      link: "https://www.linkedin.com/in/sampada-tandan-452abb283/",
+    },
+    {
+      name: "Aayush Shrestha",
+      image: "/assets/moderators/aayush.jpeg",
+      link: "http://www.linkedin.com/in/ayz-sth",
+    },
+    {
+      name: "Sandesh Adhikari",
+      image: "/assets/moderators/sandesh.jpeg",
+      link: "https://www.linkedin.com/in/sandesh-adhikari-3b14532a4",
     },
   ],
 };

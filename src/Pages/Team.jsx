@@ -12,11 +12,12 @@ const TeamMemberCard = ({ member }) => (
         loading="lazy"
       />
     </div>
-    <div className="p-6 text-center">
-      <h3 className="text-xl font-bold text-gray-800 mb-2">{member.name}</h3>
-      <p className="text-sm text-gray-600 mb-2">{member.role}</p>
+    <div className="p-3 h-24 flex flex-col justify-center">
+      <h3 className="text-lg font-bold font-inter  text-gray-800 line-clamp-2">
+        {member.name}
+      </h3>
       {member.description && (
-        <p className="text-sm text-gray-500 line-clamp-2">
+        <p className="text-sm text-gray-500 line-clamp-1 mt-2">
           {member.description}
         </p>
       )}
@@ -26,7 +27,7 @@ const TeamMemberCard = ({ member }) => (
 
 const TeamSection = ({ title, members = [] }) => {
   if (!members || members.length === 0) {
-    return null; // Don't render the section if there are no members
+    return null;
   }
 
   return (
@@ -76,7 +77,7 @@ const PhilosophySection = () => (
 const Team = () => {
   // Check if teamMembers is defined before accessing its properties
   const organizers = teamMembers?.organizers || [];
-  const partners = teamMembers?.partners || [];
+  const moderators = teamMembers?.moderators || [];
 
   return (
     <div className="bg-gray-50 min-h-screen py-24 px-4 font-sans">
@@ -86,14 +87,13 @@ const Team = () => {
             Our Team
           </h1>
           <p className="text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Meet the dedicated professionals behind{" "}
-            <span className="font-semibold">Learning Utsav</span> who are
-            committed to revolutionizing tech education.
+            Meet the highly dedicated people behind Learning Utsav, who are
+            passionate about empowering students to learn, grow, and connect!
           </p>
         </header>
 
         <TeamSection title="Organizers" members={organizers} />
-        <TeamSection title="Partners" members={partners} />
+        <TeamSection title="Moderators" members={moderators} />
         <PhilosophySection />
       </div>
     </div>
