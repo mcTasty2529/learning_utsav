@@ -23,7 +23,7 @@ export const teamMembers = {
     {
       name: "Sadhana Shrestha",
       image: "/assets/organizers/sadhana.jpeg",
-      link: "/team",
+      link: "",
     },
     {
       name: "Subodh Pokhrel",
@@ -33,7 +33,7 @@ export const teamMembers = {
     {
       name: "Priyanka Jha",
       image: "/assets/organizers/priyanka.jpeg",
-      link: "/team",
+      link: "",
     },
     {
       name: "Prabhav Pokharel",
@@ -53,7 +53,7 @@ export const teamMembers = {
     {
       name: "Shree Ram Neupane",
       image: "/assets/organizers/shreeram.jpg",
-      link: "/team",
+      link: "",
     },
     {
       name: "Suyog Thapa",
@@ -90,7 +90,7 @@ export const teamMembers = {
     {
       name: "Bibek Khanal",
       image: "/assets/moderators/bibek.jpg",
-      link: "/team",
+      link: "",
     },
     {
       name: "Nabin Regmi",

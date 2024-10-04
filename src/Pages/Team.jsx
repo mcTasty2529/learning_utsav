@@ -40,8 +40,6 @@ const TeamSection = ({ title, members = [] }) => {
           <Link
             to={member.link}
             key={member.id || member.name}
-            target="_blank"
-            rel="noopener noreferrer"
             className="block transition-transform duration-300 hover:scale-105"
           >
             <TeamMemberCard member={member} />
