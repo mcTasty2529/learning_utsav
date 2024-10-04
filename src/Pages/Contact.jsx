@@ -57,6 +57,11 @@ const ContactUs = () => {
       image: "/assets/tt-logo.png",
       href: "https://www.tiktok.com/@learningutsav",
     },
+    {
+      name: "Twitter",
+      image: "/assets/x-logo.png",
+      href: "https://x.com/learning_utsav",
+    },
   ];
 
   return (
