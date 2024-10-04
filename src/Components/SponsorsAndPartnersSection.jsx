@@ -1,36 +1,40 @@
 /* eslint-disable react/prop-types */
-import { Star, Users, Building, Handshake } from 'lucide-react';
+import { Star, Users, Building, Handshake } from "lucide-react";
 
 const sponsorLogos = [
-  'assets/sponsors/evolve.png',
-  'assets/sponsors/programiz.png',
- 
- 
+  "assets/sponsors/evolve.png",
+  "assets/sponsors/programiz.png",
 ];
 
 const communityPartnerLogos = [
-  'assets/partners/askbuddie.png',
-  'assets/partners/aws.png'
+  "assets/partners/askbuddie.png",
+  "assets/partners/aws.png",
 ];
 
 const collaboratorLogos = [
-  '/assets/collaborators/ascol.png',
-  '/assets/collaborators/collabyte.png',
-  '/assets/collaborators/ecs.png',
-  '/assets/collaborators/excess.png',
-  '/assets/collaborators/hrc.png',
-  '/assets/collaborators/ices.png',
-  '/assets/collaborators/kathfoss.png',
-  '/assets/collaborators/kuaic.png',
-  '/assets/collaborators/nec.png',
-  '/assets/collaborators/pkit.png',
-  '/assets/collaborators/robokath.png',
-  '/assets/collaborators/seis.png',
-  '/assets/collaborators/sitc.png',
+  "/assets/collaborators/ascol.png",
+  "/assets/collaborators/collabyte.png",
+  "/assets/collaborators/ecs.png",
+  "/assets/collaborators/excess.png",
+  "/assets/collaborators/hrc.png",
+  "/assets/collaborators/ices.png",
+  "/assets/collaborators/kathfoss.png",
+  "/assets/collaborators/kuaic.png",
+  "/assets/collaborators/nec.png",
+  "/assets/collaborators/pkit.png",
+  "/assets/collaborators/robokath.png",
+  "/assets/collaborators/seis.png",
+  "/assets/collaborators/sitc.png",
+  "/assets/collaborators/pnc.png",
+  "/assets/collaborators/shetech.png",
+  "/assets/collaborators/csit.png",
+  "/assets/collaborators/bcaa.png",
 ];
 
 const LogoGrid = ({ logos, alt, columns = 3 }) => (
-  <div className={`grid grid-cols-2 md:grid-cols-${columns} gap-8 items-center justify-items-center`}>
+  <div
+    className={`grid grid-cols-2 md:grid-cols-${columns} gap-8 items-center justify-items-center`}
+  >
     {logos.map((logo, index) => (
       <img
         key={index}
@@ -72,9 +76,7 @@ const SubsectionTitle = ({ icon: Icon, title }) => (
 );
 
 const SectionDescription = ({ text }) => (
-  <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
-    {text}
-  </p>
+  <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">{text}</p>
 );
 
 const Divider = () => (
@@ -90,9 +92,7 @@ const SponsorsSection = () => (
     <div className="max-w-6xl mx-auto">
       <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-lg">
         <SubsectionTitle icon={Star} title="Our Sponsors" />
-        <SectionDescription 
-          text="We are grateful for the support of our esteemed sponsors who make Learning Utsav possible. Their commitment to education and innovation drives our success."
-        />
+        <SectionDescription text="We are grateful for the support of our esteemed sponsors who make Learning Utsav possible. Their commitment to education and innovation drives our success." />
         <TwoLogoLayout logos={sponsorLogos} alt="Sponsor logo" />
       </div>
     </div>
@@ -103,15 +103,16 @@ const PartnersSection = () => (
   <section className="bg-white py-10 px-4 font-inter">
     <div className="max-w-6xl mx-auto">
       <SectionTitle icon={Users} title="Our Partners" />
-      
+
       <div className="space-y-10">
         {/* Community Partners Section */}
         <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-lg">
           <SubsectionTitle icon={Building} title="Community Partners" />
-          <SectionDescription 
-            text="Local organizations and institutions that support our mission and help us connect with the community."
+          <SectionDescription text="Local communities and institutions that support our mission and help us connect with the community." />
+          <TwoLogoLayout
+            logos={communityPartnerLogos}
+            alt="Community Partner logo"
           />
-          <TwoLogoLayout logos={communityPartnerLogos} alt="Community Partner logo" />
         </div>
 
         <Divider />
@@ -119,10 +120,12 @@ const PartnersSection = () => (
         {/* Collaborators Section */}
         <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-lg">
           <SubsectionTitle icon={Handshake} title="Collaborators" />
-          <SectionDescription 
-            text="Industry experts and organizations that contribute their expertise to enrich our programs."
+          <SectionDescription text="Industry experts and organizations that contribute their expertise to enrich our programs." />
+          <LogoGrid
+            logos={collaboratorLogos}
+            alt="Collaborator logo"
+            columns={4}
           />
-          <LogoGrid logos={collaboratorLogos} alt="Collaborator logo" columns={4} />
         </div>
       </div>
     </div>

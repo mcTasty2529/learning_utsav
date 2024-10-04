@@ -11,7 +11,7 @@ const Header = () => {
 
   const menuItems = [
     { name: "Home", href: "/" },
-    // { name: "Our Team", href: "/" },
+    { name: "Our Team", href: "/team" },
     { name: "Contact Us", href: "/contact" },
   ];
 
@@ -40,7 +40,7 @@ const Header = () => {
           </nav>
 
           {/* Register Button */}
-         
+
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}

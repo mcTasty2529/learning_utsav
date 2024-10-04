@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
-import { useState, useEffect } from "react";
-import { ChevronDown, ArrowRight, Clock, Users, Trophy } from "lucide-react";
+import { ArrowRight, ChevronDown, Clock, Trophy, Users } from "lucide-react";
+import { useEffect, useState } from "react";
 import AboutEventSection from "../Components/AboutEventSection";
 import SponsorsAndPartnersSection from "../Components/SponsorsAndPartnersSection";
 import { Link } from "react-router-dom";
@@ -72,7 +72,13 @@ const Home = () => {
 
           <CountUpTimer />
 
-          <Link to={"/"}>
+          <Link
+            to={
+              "https://docs.google.com/forms/d/e/1FAIpQLSeWTVIqaZMnWHuTqPsVCAchpzKlETeo8x_0PimbGDyeA3WFtQ/viewform"
+            }
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <button className="mt-6 md:mt-8 bg-red-600 hover:bg-red-700 text-white text-lg md:text-xl py-2 px-4 md:py-3 md:px-6 rounded-lg transition-colors duration-300 shadow-lg hover:shadow-xl">
               Update Your Progress
             </button>
@@ -111,7 +117,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-              Welcome to the Future of Learning
+              Welcome to the Festival of Learning
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               <span className="font-semibold text-red-600">Learning Utsav</span>{" "}
