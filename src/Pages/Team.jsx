@@ -66,10 +66,10 @@ const PhilosophySection = () => (
     <div className="max-w-4xl mx-auto text-center">
       <h2 className="text-4xl font-bold mb-8 leading-tight">Our Philosophy</h2>
       <div className="text-2xl font-light mb-12 space-y-4">
-        <p>Innovate.</p>
-        <p className="italic">Collaborate.</p>
+        <p>Learn.</p>
+        <p className="italic">Share.</p>
         <p className="underline decoration-white decoration-4 underline-offset-8">
-          Educate.
+          Grow.
         </p>
       </div>
       <p className="text-xl leading-relaxed">
