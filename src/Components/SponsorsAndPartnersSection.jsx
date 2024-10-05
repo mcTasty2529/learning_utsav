@@ -31,7 +31,7 @@ const collaboratorLogos = [
   "/assets/collaborators/bcaa.png",
 ];
 
-const LogoGrid = ({ logos, alt, columns = 3 }) => (
+const LogoGrid = ({ logos, alt, columns = 4 }) => (
   <div
     className={`grid grid-cols-2 md:grid-cols-${columns} gap-8 items-center justify-items-center`}
   >
