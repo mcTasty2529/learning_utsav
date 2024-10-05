@@ -54,10 +54,10 @@ const Home = () => {
         className="min-h-screen py-20 md:py-32 flex flex-col justify-center items-center text-center p-4 bg-cover bg-center text-white relative mt-10"
         style={{
           backgroundImage: "url('/assets/Initial.png')",
-          backgroundAttachment: "fixed",
+          // backgroundAttachment: "fixed",
         }}
       >
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
         <div className="relative w-full max-w-4xl mx-auto">
           <h1 className="text-5xl sm:text-7xl md:text-9xl font-bold mb-4 md:mb-6 font-bebas tracking-wide">
             Learning Utsav
