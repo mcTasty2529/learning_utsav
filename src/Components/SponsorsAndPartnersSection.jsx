@@ -31,9 +31,9 @@ const collaboratorLogos = [
   "/assets/collaborators/bcaa.png",
 ];
 
-const LogoGrid = ({ logos, alt, columns = 4 }) => (
+const LogoGrid = ({ logos, alt }) => (
   <div
-    className={`grid grid-cols-2 md:grid-cols-${columns} gap-8 items-center justify-items-center`}
+    className={`grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center`}
   >
     {logos.map((logo, index) => (
       <img
@@ -121,11 +121,7 @@ const PartnersSection = () => (
         <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-lg">
           <SubsectionTitle icon={Handshake} title="Collaborators" />
           <SectionDescription text="Industry experts and organizations that contribute their expertise to enrich our programs." />
-          <LogoGrid
-            logos={collaboratorLogos}
-            alt="Collaborator logo"
-            columns={4}
-          />
+          <LogoGrid logos={collaboratorLogos} alt="Collaborator logo" />
         </div>
       </div>
     </div>
