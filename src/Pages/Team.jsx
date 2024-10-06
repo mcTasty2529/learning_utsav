@@ -76,8 +76,7 @@ const PhilosophySection = () => (
         Our <span className="font-medium">diverse team</span> brings together
         expertise from various tech domains, united by a shared{" "}
         <span className="italic">passion for learning</span> and innovation.
-        Together, we&apos;re shaping the{" "}
-        <span className="font-semibold">future of tech education</span>.
+       
       </p>
     </div>
   </section>
