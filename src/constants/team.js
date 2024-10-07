@@ -117,5 +117,15 @@ export const teamMembers = {
       image: "/assets/moderators/sandesh.jpeg",
       link: "https://www.linkedin.com/in/sandesh-adhikari-3b14532a4",
     },
+    {
+      name: "Monika Shrestha",
+      image: "/assets/moderators/monika.jpg",
+      link: "https://www.linkedin.com/in/monika-shrestha-3b17aa269",
+    },
+    {
+      name: "Pooja Gurung ",
+      image: "/assets/moderators/pooja.jpg",
+      link: "https://www.linkedin.com/in/pooja-gurung-336993229",
+    },
   ],
 };
