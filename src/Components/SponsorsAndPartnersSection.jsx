@@ -4,6 +4,7 @@ import { Star, Users, Building, Handshake } from "lucide-react";
 const sponsorLogos = [
   "assets/sponsors/evolve.png",
   "assets/sponsors/programiz.png",
+  "assets/sponsors/broadway-logo.png",
 ];
 
 const communityPartnerLogos = [
