@@ -60,6 +60,20 @@ const TwoLogoLayout = ({ logos, alt }) => (
   </div>
 );
 
+const ThreeLogoLayout = ({ logos, alt }) => (
+  <div className="grid grid-cols-2 sm:grid-cols-3 space-y-4">
+    {logos.map((logo, index) => (
+      <div key={index} className="flex justify-center items-center">
+        <img
+          src={logo}
+          alt={`${alt} ${index + 1}`}
+          className="max-w-[140px] max-h-[90px] object-contain transform hover:scale-110 transition-transform duration-300"
+        />
+      </div>
+    ))}
+  </div>
+);
+
 const SectionTitle = ({ icon: Icon, title }) => (
   <div className="flex items-center justify-center mb-8">
     <Icon size={32} className="text-blue-600 mr-4" />
@@ -94,7 +108,7 @@ const SponsorsSection = () => (
       <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-lg">
         <SubsectionTitle icon={Star} title="Our Sponsors" />
         <SectionDescription text="We are grateful for the support of our esteemed sponsors who make Learning Utsav possible. Their commitment to education and innovation drives our success." />
-        <TwoLogoLayout logos={sponsorLogos} alt="Sponsor logo" />
+        <ThreeLogoLayout logos={sponsorLogos} alt="Sponsor logo" />
       </div>
     </div>
   </section>
