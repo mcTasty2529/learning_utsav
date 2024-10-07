@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { teamMembers } from "../constants/team";
 
 const TeamMemberCard = ({ member }) => (
-  <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1">
+  <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1 border-2 border-indigo-200">
     <div className="relative pt-[133%]">
       <img
         src={member.image}
@@ -76,7 +76,6 @@ const PhilosophySection = () => (
         Our <span className="font-medium">diverse team</span> brings together
         expertise from various tech domains, united by a shared{" "}
         <span className="italic">passion for learning</span> and innovation.
-       
       </p>
     </div>
   </section>
