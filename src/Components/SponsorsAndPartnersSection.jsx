@@ -61,9 +61,9 @@ const TwoLogoLayout = ({ logos, alt }) => (
 );
 
 const ThreeLogoLayout = ({ logos, alt }) => (
-  <div className="grid grid-cols-2 sm:grid-cols-3 space-y-4">
+  <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 space-y-6 sm:space-y-0">
     {logos.map((logo, index) => (
-      <div key={index} className="flex justify-center items-center">
+      <div key={index} className="flex justify-center items-center ">
         <img
           src={logo}
           alt={`${alt} ${index + 1}`}
