@@ -4,7 +4,8 @@ import "./index.css";
 import { Analytics } from "@vercel/analytics/react";
 
 createRoot(document.getElementById("root")).render(
-  <Analytics>
+  <>
     <App />
-  </Analytics>
+    <Analytics />
+  </>
 );
