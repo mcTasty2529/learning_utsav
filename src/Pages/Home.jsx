@@ -120,7 +120,7 @@ const Home = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsPopupVisible(true);
-    }, 1000);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
