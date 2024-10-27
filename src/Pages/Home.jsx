@@ -17,9 +17,9 @@ import { Link } from "react-router-dom";
 const SessionPopup = ({ onClose, isVisible }) => {
   return (
     <div
-      className={`fixed bottom-4 right-4 mx-4 max-w-sm w-[calc(100%-2rem)] sm:w-full bg-white rounded-xl shadow-2xl z-50 overflow-hidden transform transition-all duration-500 ease-in-out
+      className={`fixed left-1/2 -translate-x-1/2 bottom-4 w-[calc(100%-2rem)] sm:w-full sm:left-auto sm:right-4 sm:translate-x-0 max-w-sm bg-white rounded-xl shadow-2xl z-50 overflow-hidden transform transition-all duration-500 ease-in-out
         ${
-          isVisible ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
+          isVisible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
         }`}
     >
       <div className="bg-red-600 p-3 sm:p-4 text-white relative">
@@ -61,7 +61,9 @@ const SessionPopup = ({ onClose, isVisible }) => {
           <p>CTO - 28Softwares & Content Creator - Everyday Karma</p>
         </div>
         <Link
-          to="/dbsession"
+          to="https://docs.google.com/forms/d/e/1FAIpQLSfYiZhlyRoFeMfhftfoPw2bniAcXxBIv1IGrLS_azDlAPMAyw/viewform"
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex items-center justify-center w-full bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700 transition-colors duration-300 text-sm"
         >
           Register Now
@@ -120,7 +122,7 @@ const Home = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsPopupVisible(true);
-    }, 2000);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, []);
