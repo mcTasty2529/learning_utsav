@@ -123,7 +123,7 @@ const PartnersSection = () => (
         {/* Community Partners Section */}
         <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-lg">
           <SubsectionTitle icon={Building} title="Community Partners" />
-          <SectionDescription text="Local communities and institutions that support our mission and help us connect with the community." />
+          <SectionDescription text="Communities and clubs that support our mission and help us connect with the community." />
           <TwoLogoLayout
             logos={communityPartnerLogos}
             alt="Community Partner logo"
