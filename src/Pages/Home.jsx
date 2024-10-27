@@ -1,9 +1,76 @@
 /* eslint-disable react/prop-types */
-import { ArrowRight, ChevronDown, Clock, Trophy, Users } from "lucide-react";
+import {
+  ArrowRight,
+  ChevronDown,
+  Clock,
+  Trophy,
+  Users,
+  Calendar,
+  X,
+  ExternalLink,
+} from "lucide-react";
 import { useEffect, useState } from "react";
 import AboutEventSection from "../Components/AboutEventSection";
 import SponsorsAndPartnersSection from "../Components/SponsorsAndPartnersSection";
 import { Link } from "react-router-dom";
+
+const SessionPopup = ({ onClose, isVisible }) => {
+  return (
+    <div
+      className={`fixed bottom-4 right-4 mx-4 max-w-sm w-[calc(100%-2rem)] sm:w-full bg-white rounded-xl shadow-2xl z-50 overflow-hidden transform transition-all duration-500 ease-in-out
+        ${
+          isVisible ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
+        }`}
+    >
+      <div className="bg-red-600 p-3 sm:p-4 text-white relative">
+        <button
+          onClick={onClose}
+          className="absolute right-2 top-2 hover:bg-red-700 rounded-full p-1 transition-colors duration-200"
+        >
+          <X size={20} />
+        </button>
+        <h3 className="font-bold text-base sm:text-lg">Upcoming Session!</h3>
+        <p className="text-xs sm:text-sm text-red-100">
+          Join us for an interactive learning experience
+        </p>
+      </div>
+
+      <div className="p-3 sm:p-4">
+        <h4 className="font-bold text-lg sm:text-xl text-gray-800 mb-2">
+          Database Management System (DBMS)
+        </h4>
+
+        <div className="space-y-2 mb-3 sm:mb-4">
+          <div className="flex items-center text-gray-600">
+            <Clock size={16} className="mr-2" />
+            <span className="text-xs sm:text-sm">7:30 - 9:30 PM</span>
+          </div>
+          <div className="flex items-center text-gray-600">
+            <Calendar size={16} className="mr-2" />
+            <span className="text-xs sm:text-sm">Kartik 14th, Wednesday</span>
+          </div>
+          <div className="flex items-center text-gray-600">
+            <Users size={16} className="mr-2" />
+            <span className="text-xs sm:text-sm">
+              Facilitator: Mr. Saroj Dahal
+            </span>
+          </div>
+        </div>
+
+        <div className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4">
+          <p>CTO - 28Softwares & Content Creator - Everyday Karma</p>
+        </div>
+        <Link
+          to="/dbsession"
+          className="flex items-center justify-center w-full bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700 transition-colors duration-300 text-sm"
+        >
+          Register Now
+          <ExternalLink size={16} className="ml-2" />
+        </Link>
+      </div>
+    </div>
+  );
+};
 
 const FeatureCard = ({ icon: Icon, title, description }) => (
   <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -48,8 +115,23 @@ const CountUpTimer = () => {
 };
 
 const Home = () => {
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsPopupVisible(true);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleClosePopup = () => {
+    setIsPopupVisible(false);
+  };
+
   return (
     <div className="min-h-screen flex flex-col font-inter">
+      <SessionPopup onClose={handleClosePopup} isVisible={isPopupVisible} />
       <section
         className="min-h-screen py-20 md:py-32 flex flex-col justify-center items-center text-center p-4 bg-cover bg-center text-white relative mt-10"
         style={{
