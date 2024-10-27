@@ -61,9 +61,7 @@ const SessionPopup = ({ onClose, isVisible }) => {
           <p>CTO - 28Softwares & Content Creator - Everyday Karma</p>
         </div>
         <Link
-          to="https://docs.google.com/forms/d/e/1FAIpQLSfYiZhlyRoFeMfhftfoPw2bniAcXxBIv1IGrLS_azDlAPMAyw/viewform"
-          target="_blank"
-          rel="noopener noreferrer"
+          to="/dbsession"
           className="flex items-center justify-center w-full bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700 transition-colors duration-300 text-sm"
         >
           Register Now
