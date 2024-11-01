@@ -12,7 +12,7 @@ const Header = () => {
   const menuItems = [
     { name: "Home", href: "/" },
     { name: "Our Team", href: "/team" },
-    { name: "DB Session", href: "/dbsession" },
+    // { name: "DB Session", href: "/dbsession" },
     { name: "Contact Us", href: "/contact" },
   ];
 
