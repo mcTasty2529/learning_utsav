@@ -75,6 +75,7 @@ const FeatureCard = ({ icon: Icon, title, description }) => (
 
 const CountUpTimer = () => {
   const [days, setDays] = useState(1);
+  const [isEnded, setIsEnded] = useState(false);
 
   useEffect(() => {
     const startDate = new Date("2024-10-03");
@@ -83,7 +84,9 @@ const CountUpTimer = () => {
       const difference = Math.abs(
         Math.floor((now - startDate) / (1000 * 60 * 60 * 24))
       );
-      setDays(Math.min(difference + 1, 32));
+      const currentDays = Math.min(difference + 1, 33);
+      setDays(currentDays);
+      setIsEnded(currentDays >= 33);
     };
 
     updateTimer();
@@ -93,13 +96,26 @@ const CountUpTimer = () => {
 
   return (
     <div className="flex justify-center">
-      <div className="bg-white/20 backdrop-blur-lg rounded-xl p-4 md:p-6 shadow-lg mt-4 md:mt-8 w-36 sm:w-48">
-        <div className="text-4xl sm:text-6xl font-bold text-red-600">
-          {days}
-        </div>
-        <div className="text-sm sm:text-xl text-white mt-1 sm:mt-2">
-          Days of Learning
-        </div>
+      <div className="bg-white/20 backdrop-blur-lg rounded-xl p-4 md:p-6 shadow-lg mt-4 md:mt-8 w-auto sm:w-auto min-w-[12rem] sm:min-w-[16rem]">
+        {isEnded ? (
+          <>
+            <div className="text-2xl sm:text-3xl font-bold text-red-600">
+              Event Ended
+            </div>
+            <div className="text-sm sm:text-xl text-white mt-1 sm:mt-2">
+              Thank you for participating!
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="text-4xl sm:text-6xl font-bold text-red-600">
+              {days}
+            </div>
+            <div className="text-sm sm:text-xl text-white mt-1 sm:mt-2">
+              Days of Learning
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
